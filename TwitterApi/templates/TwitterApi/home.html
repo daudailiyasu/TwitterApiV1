@@ -11,7 +11,10 @@
   <body>
   <div class="w3-container" style="margin-top:30px" id="Home">
   <h1 class="w3-xxlarge w3-text-indigo"><b></b></h1>
-  
+  <div class="alert alert-warning" role="alert" >
+    <H5 style="text-align: center;">JUST 100 TWEETS CAN BE EXTRACTED PER CALL</H5>
+    <p style="text-align: center;">Note:The extraction may be delayed for <span style="color:red;">15 or more minute</span> by TWITTER if rate limit is reached </p>
+  </div>
   <form action="" method="POST">
     {% csrf_token %}
     {{ form|crispy }}
