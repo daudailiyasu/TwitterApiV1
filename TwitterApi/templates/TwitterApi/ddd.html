@@ -1,0 +1,47 @@
+<!--
+@Author: Pragya Gautam
+@Purpose: HTML page for showing user account settings
+-->
+{% extends 'TwitterApi/base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+  <html>
+  <head>
+  </head>
+  <body>
+  Salam alaikkk
+  {{consumer_key}}
+  {{access_token}}
+  <form action="codes" method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <!--<div class="form-group">
+      <label for="formGroupExampleInput">consumer_key</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">consumer_secret</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput">access_token</label>
+      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+      <label for="formGroupExampleInput2">access_token_secret</label>
+      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>-->
+    <input type="submit" class="btn btn-primary btn-lg btn-block" value="Save TwitterApiUser"></button>
+  
+  </form>
+  </body>
+  <!---{% for me in count %}-->
+  <div>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:70%">{{count}}</div>
+    </div>
+  </div>
+   <!---{% endfor %}-->
+  
+</html>
+{% endblock %}
